@@ -155,9 +155,12 @@ button span {
     transform: translateX(-50%);
 }
 
-.dad {
+#legenda > div {
     height: 30px;
-    width: 30px;
+    width: 50px;
+}
+
+.dad {
     margin: 10px;
     background-color: turquoise;
     display: flex;
@@ -166,13 +169,9 @@ button span {
     text-align: center;
     justify-content: center;
     padding: 10px;
-
-    /* Estilos para a classe "dad" se necessário */
 }
 
 .mom {
-    height: 30px;
-    width: 30px;
     margin: 10px;
     background-color: lightpink;
     display: flex;
@@ -181,5 +180,25 @@ button span {
     text-align: center;
     justify-content: center;
     padding: 10px;
-    /* Estilos para a classe "mom" se necessário */
+}
+
+.feriado {
+    height: 30px;
+    width: 30px;
+    margin: 10px;
+    background-color: #4b4b4b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 10px;
+    border: 1px solid #f70000;
+    box-shadow: inset 0 0 10px #ff0000;
+}
+
+
+.holiday {
+    border: 1px solid #f70000;
+    box-shadow: inset 0 0 10px #ff0000;
 }
