@@ -69,18 +69,19 @@ function colorizeWeeks(firstDayOfMonth) {
     }
 }
 
-
-
 function generateDaysHTML(daysInMonth, firstDayOfMonth) {
     let dayHTML = "";
     let dayCount = 1;
+    const today = new Date();
 
     for (let i = 0; i < 6; i++) {
         for (let j = 0; j < 7; j++) {
             if ((i === 0 && j < firstDayOfMonth) || dayCount > daysInMonth) {
                 dayHTML += `<div class="empty-day"></div>`;
             } else {
-                dayHTML += `<div class="day">${dayCount}</div>`;
+                // Adiciona a classe 'current-day' se o dia for o dia atual
+                const isCurrentDay = today.getDate() === dayCount && today.getMonth() === currentDate.getMonth() && today.getFullYear() === currentDate.getFullYear();
+                dayHTML += `<div class="day${isCurrentDay ? ' current-day' : ''}">${dayCount}</div>`;
                 dayCount++;
             }
         }
